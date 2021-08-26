@@ -1,12 +1,11 @@
 # Meow Bottom Navigation For Java Projects without androidx  
-# DEPRECATED !!! 
-We suggest you to use [Meow Bottom Navigation in Kotlin](https://github.com/oneHamidreza/MeowBottomNavigation)
+# Androidx Supported :D
 
 A simple & curved & material bottom navigation for Android.  
   
 ![](https://github.com/shetmobile/MeowBottomNavigation/raw/master/resources/Preview.gif)  
   
-> CAUTION : if you are **Kotlin** developer, so check this link: https://github.com/oneHamidreza/MeowBottomNavigation
+> If you are **Kotlin** developer, check this link: https://github.com/oneHamidreza/MeowBottomNavigation
   
 ## Download  
 build.gradle (project path)  
