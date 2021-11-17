@@ -11,16 +11,11 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
+import android.graphics.Bitmap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-/**
- * Created by 1HE on 2020-02-02.
- */
-
-@SuppressWarnings("unused")
 public final class MeowBottomNavigation extends FrameLayout {
 
     public interface ClickListener{
@@ -194,29 +189,7 @@ public final class MeowBottomNavigation extends FrameLayout {
     }
 
     private void setAttributeFromXml(Context context, AttributeSet attrs) {
-        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MeowBottomNavigation, 0, 0);
-
-        try {
-            boolean var5 = false;
-            boolean var6 = false;
-            this.setDefaultIconColor(a.getColor(R.styleable.MeowBottomNavigation_mbn_defaultIconColor, this.defaultIconColor));
-            this.setSelectedIconColor(a.getColor(R.styleable.MeowBottomNavigation_mbn_selectedIconColor, this.selectedIconColor));
-            this.setBackgroundBottomColor(a.getColor(R.styleable.MeowBottomNavigation_mbn_backgroundBottomColor, this.backgroundBottomColor));
-            this.setCircleColor(a.getColor(R.styleable.MeowBottomNavigation_mbn_circleColor, this.circleColor));
-            this.setCountTextColor(a.getColor(R.styleable.MeowBottomNavigation_mbn_countTextColor, this.countTextColor));
-            this.setCountBackgroundColor(a.getColor(R.styleable.MeowBottomNavigation_mbn_countBackgroundColor, this.countBackgroundColor));
-            this.rippleColor = a.getColor(R.styleable.MeowBottomNavigation_mbn_rippleColor, this.rippleColor);
-            this.shadowColor = a.getColor(R.styleable.MeowBottomNavigation_mbn_shadowColor, this.shadowColor);
-            String typeface = a.getString(R.styleable.MeowBottomNavigation_mbn_countTypeface);
-            if (typeface != null) {
-                boolean var11 = false;
-                if (((CharSequence) typeface).length() > 0) {
-                    this.setCountTypeface(Typeface.createFromAsset(context.getAssets(), typeface));
-                }
-            }
-        } finally {
-            a.recycle();
-        }
+        
 
     }
 
@@ -548,7 +521,7 @@ public final class MeowBottomNavigation extends FrameLayout {
 
         private String count;
         private int id;
-        private int icon;
+        private Bitmap icon;
 
         public final String getCount() {
             return this.count;
@@ -566,11 +539,11 @@ public final class MeowBottomNavigation extends FrameLayout {
             this.id = var1;
         }
 
-        public final int getIcon() {
+        public final Bitmap getIcon() {
             return this.icon;
         }
 
-        public final void setIcon(int var1) {
+        public final void setIcon(Bitmap var1) {
             this.icon = var1;
         }
 
